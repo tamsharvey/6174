@@ -13,4 +13,4 @@ Then subtract the smallest from the largest and repeat
 
 Within at most 7 steps you land on 6174
 
-After that i loops forever
+After that it loops forever
