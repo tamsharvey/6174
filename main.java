@@ -29,20 +29,27 @@ public class main
                 continue;
             }
 
-            char[] digits = input.toCharArray();
-            Arrays.sort(digits);
+            int result = 0;
 
-            String ascending  = new String(digits);
-            String descending = new StringBuilder(ascending).reverse().toString();
+            while (result != 6174)
+            {
+                char[] digits = input.toCharArray();
+                Arrays.sort(digits);
 
-            int high   = Integer.parseInt(descending);
-            int low    = Integer.parseInt(ascending);
-            int result = high - low;
+                String ascending  = new String(digits);
+                String descending = new StringBuilder(ascending).reverse().toString();
 
-            System.out.println("  Highest to lowest : " + descending);
-            System.out.println("  Lowest to highest : " + ascending);
-            System.out.println("  Result            : " + result);
-            System.out.println();
+                int high   = Integer.parseInt(descending);
+                int low    = Integer.parseInt(ascending);
+                result = high - low;
+
+                System.out.println("  Highest to lowest : " + descending);
+                System.out.println("  Lowest to highest : " + ascending);
+                System.out.println("  Result            : " + result);
+                System.out.println();
+
+                input = String.format("%04d", result);
+            }
         }
 
         scanner.close();
