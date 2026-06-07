@@ -8,12 +8,12 @@ public class main
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a 4-digit number (or 'q' to exit)");
-        System.out.println("Not all numbers can be the same: eg 4444 is invalid. 4441 is valid");
+        System.out.println("Enter a 4-digit number");
+        System.out.println("Not all numbers can be the same: eg 4444 is invalid. 1888 is valid");
 
         while (true)
         {
-            System.out.println("Enter number:");
+            System.out.println("Enter number (or q to quit):");
 
             String input = scanner.nextLine().trim();
 
