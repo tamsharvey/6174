@@ -8,11 +8,13 @@ public class main
     {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter a 4-digit number (or 'q' to exit)");
+        System.out.println("Not all numbers can be the same: eg 4444 is invalid. 4441 is valid");
+
         while (true)
         {
-            System.out.println("Enter a 4-digit number (or 'q' to exit)");
-            System.out.println("Not all numbers can be the same: eg 4444 is invalid. 4441 is valid");
-            System.out.println
+            System.out.println("Enter number:");
+
             String input = scanner.nextLine().trim();
 
             if (input.equalsIgnoreCase("q"))
