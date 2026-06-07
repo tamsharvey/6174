@@ -8,12 +8,12 @@ public class main
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a 4-digit number (or 'q' to exit)");
-        System.out.println("Not all numbers can be the same: eg 4444 is invalid. 4441 is valid");
+        System.out.println("Enter a 4-digit number");
+        System.out.println("Not all numbers can be the same: eg 4444 is invalid. 1888 is valid");
 
         while (true)
         {
-            System.out.println("Enter number:");
+            System.out.println("Enter number (or q to quit):");
 
             String input = scanner.nextLine().trim();
 
@@ -29,20 +29,27 @@ public class main
                 continue;
             }
 
-            char[] digits = input.toCharArray();
-            Arrays.sort(digits);
+            int result = 0;
 
-            String ascending  = new String(digits);
-            String descending = new StringBuilder(ascending).reverse().toString();
+            while (result != 6174)
+            {
+                char[] digits = input.toCharArray();
+                Arrays.sort(digits);
 
-            int high   = Integer.parseInt(descending);
-            int low    = Integer.parseInt(ascending);
-            int result = high - low;
+                String ascending  = new String(digits);
+                String descending = new StringBuilder(ascending).reverse().toString();
 
-            System.out.println("  Highest to lowest : " + descending);
-            System.out.println("  Lowest to highest : " + ascending);
-            System.out.println("  Result            : " + result);
-            System.out.println();
+                int high   = Integer.parseInt(descending);
+                int low    = Integer.parseInt(ascending);
+                result = high - low;
+
+                System.out.println("  Highest to lowest : " + descending);
+                System.out.println("  Lowest to highest : " + ascending);
+                System.out.println("  Result            : " + result);
+                System.out.println();
+
+                input = String.format("%04d", result);
+            }
         }
 
         scanner.close();
