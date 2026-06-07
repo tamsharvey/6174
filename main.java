@@ -50,6 +50,19 @@ public class main
 
                 input = String.format("%04d", result);
             }
+
+            System.out.println("6174 is Kaprekar's constant!");
+            System.out.println("If the process is repeated on 6174, it always loops back:");
+
+            char[] digits6174 = "6174".toCharArray();
+            Arrays.sort(digits6174);
+            String asc = new String(digits6174);
+            String desc = new StringBuilder(asc).reverse().toString();
+            System.out.println("");
+            System.out.println("  Highest to lowest : " + desc);
+            System.out.println("  Lowest to highest : " + asc);
+            System.out.println("  Result            : " + (Integer.parseInt(desc) - Integer.parseInt(asc)));
+            System.out.println("-------------------------------");
         }
 
         scanner.close();
